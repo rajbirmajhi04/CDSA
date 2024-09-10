@@ -1,0 +1,19 @@
+1st Year:
+--> 1st Sem: C++ & DSA
+--> 1st Winter Break: Practice Questions
+--> 2nd Sem: Competitive Programming or Start Development 
+--> 1st Summer Vacation: Build Project
+
+2nd Year:
+--> 3rd Sem: (Resume Building) -> Build a strong competitve profile, Projects, GPA, & Contest Participation
+--> 4th Sem: Interships or Open Source
+--> 2nd Summer Vacations: Practice DSA, CP, Theory Concepts, and Update Resume
+
+3rd Year: 
+--> After grabbing Intership
+--> Explore different domains --> Open Source, AI/ML, Robotics, IOT or Research
+
+4th Year:
+--> Find your speciality
+--> Grab Placement
+--> Build Projects
