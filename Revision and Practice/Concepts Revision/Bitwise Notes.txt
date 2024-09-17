@@ -1,0 +1,44 @@
+Operators:-
+
+1) Bitwise And (&):
+--> 0 & 0 = 0
+--> 1 & 1 = 1
+--> 0 & l = 0
+--> 1 & 0 = 0
+
+2) Bitwise OR (|):
+--> 0 | 0 = 0
+--> 1 | 1 = 1
+--> 1 | 0 = 1
+--> 0 | 1 = 1
+
+3) Bitwise XOR (^):
+--> 1 ^ 1 = 0
+--> 0 ^ 0 = 0
+--> 1 ^ 0 = 1
+--> 0 ^ 1 = 1
+
+4) Bitwise Left Shift (<<):
+--> shifts the bits of the operand to the left by the specified number of positions. 
+--> the vacant right bits are filled with zeros.
+--> suppose (a << b) = (a * 2 ^ b)
+
+4) Bitwise Right Shift (<<):
+--> shifts the bits of the operand to the right by the specified number of positions. 
+--> the vacant left bits are filled with zeros.
+--> suppose (a >> b) = (a / 2 ^ b)
+
+5) Bitwise Complement or NOT (~):
+--> Inverts all the bits operand
+--> 0~ = 1
+--> 1~ = 0
+
+Precedence:
+(!, ++, --)         --> 1st --> R to L
+(*, /, %)           --> 2nd --> L to R
+(+, -)              --> 3rd --> L to R
+(<, <=, >=, >)      --> 4th --> L to R
+(==, !=)            --> 5th --> L to R
+(&&)                --> 6th --> L to R
+(||)                --> 7th --> L to R
+(=)                 --> 8th --> L to R

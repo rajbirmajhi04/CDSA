@@ -1,0 +1,13 @@
+Data structures are organized ways to store, manage, and retrieve data efficiently, depending on the type of operations you need to perform. They provide a means to organize large amounts of data for optimal performance in various algorithms and tasks.
+
+Common Data Structures:
+
+1) Arrays:
+--> Array is a data structure that stores a collection of elements of same type in contiguous memory locations
+--> Fixed size, Indexed Access, Contiguous Memory, Homogeneous Elements and Linear
+
+--> Advantages: Memory Efficient and Fast Access
+--> Disadvantages: Fixed Size, Insertion and Deletion requires shifting of elements
+
+
+
