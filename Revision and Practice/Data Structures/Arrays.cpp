@@ -1,6 +1,22 @@
 #include <iostream>
 using namespace std;
 
+// Passing array using pointer
+void fun(int *array, int size){
+    for(int i = 0; i < size; i++){
+        cout << array[i] << " ";
+    }
+    cout << endl;
+}
+
+// Passing array using reference
+void fun1(int (&array)[5]){
+    for(int i = 0; i < 5; i++){
+        cout << array[i] << " ";
+    }
+    cout << endl;    
+}
+
 int main()
 {
     /*
@@ -126,7 +142,23 @@ int main()
         cout << "Largest: " << largest << endl;
     */
 
-    // Reverse an Array
+    // Arrays and Pointers
+    int array[5] = {1, 2, 3, 4, 5};
+    int size = sizeof(array)/sizeof(array[0]);
+    int *arr_ptr_one = &array[0]; // Method 1
+    int *arr_ptr_two = array; // Method 2
+
+    // Passing arrays to function using pointers
+    // The array decays into pointer to its first element. However since the size is not passed along with the pointer.
+    // We need to pass the array size separately.
+    fun(array, size);
     
+    // Passing arrays to function using reference
+    // The function receives the entire array as a reference
+    fun1(array);
+
+    // Dynamic Memory Management
+    int 
+
     return 0;
 }
