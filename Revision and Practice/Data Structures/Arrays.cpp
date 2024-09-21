@@ -77,69 +77,6 @@ int main()
         cout << marks[i] << " ";
     }
     cout << endl;
-    
-    // Find an element in an array
-    int elem_input;
-    cout << "Enter number of elements: ";
-    cin >> elem_input;
-
-    int storage[10] = {};
-    int storage_size = sizeof(storage) / sizeof(storage[0]);
-
-    for(int i = 0; i < elem_input; i++){
-        cout << "Enter element [" << i << "]: ";
-        cin >> storage[i];
-    }
-
-    cout << "Storage Elements: ";
-    for(int i = 0; i < storage_size; i++){
-        cout << storage[i]  << " ";
-    }
-    cout << endl;
-
-    int target;
-    cout << "Enter element to find: ";
-    cin >> target;
-
-    for(int i = 0; i <= storage_size; i++){
-        if(storage[i] == target){
-            cout << "Match Found!" << endl;
-            break;
-        }
-        else {
-            cout << "Match not found!" << endl;
-            break;
-        }
-    }
-
-    // Find the largest and smallest value
-    int smallest = INT_MIN;
-    int largest = INT_MAX;
-
-    for(int j = 0; j < storage_size; j++){
-        if(storage[j] < smallest){
-            smallest = storage[j];
-        }
-        if(storage[j] > largest){
-            largest = storage[j];
-        }
-    }
-
-    cout << "Smallest: " << smallest << endl;
-    cout << "Largest: " << largest << endl;
-
-    int num_array[] = {1, -4, 54, -2, 22};
-    int size = sizeof(num_array) / sizeof(num_array[0]);
-
-    int smallest = INT_MIN;
-    int largest = INT_MAX;
-
-    for(int i = 0; i < size; i++){
-        smallest = min(num_array[i], smallest);
-        largest = max(num_array[i], largest);
-    }
-    cout << "Smallest: " << smallest << endl;
-    cout << "Largest: " << largest << endl;
 
     // Arrays and Pointers
     int array[5] = {1, 2, 3, 4, 5};
