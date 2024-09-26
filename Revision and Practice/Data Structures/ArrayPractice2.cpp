@@ -5,7 +5,6 @@ using namespace std;
 void display(int *array, int size);
 int CalculateSD(int data[], int size);
 void ReverseArray(int *array, int size);
-void RotateArray(int *array, int size, int k);
 
 int main()
 {   
