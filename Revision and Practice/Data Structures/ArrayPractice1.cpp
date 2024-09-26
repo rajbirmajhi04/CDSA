@@ -6,6 +6,8 @@ void display(int *array, int size);
 int CalculateSD(int data[], int size);
 void ReverseArray(int *array, int size);
 void SecondLargest(int *array, int size);
+void rotateLeft(int *array, int size, int k);
+void rotateRight(int *array, int size, int k);
 
 int main()
 {   
@@ -97,6 +99,40 @@ void SecondLargest(int *array, int size){
     }
 
     cout << "Second Largest Element: " << second << endl;
+}
+
+void rotateLeft(int *array, int size, int k){
+    int temp[n];
+
+    // copy the elements of original array into temp array
+    for(int i = 0; i < n; i++){
+        temp[i] = array[i];
+    }
+
+    // calculate the starting index of the rotation
+    int startIndex = k % n;
+
+    // copy the elements from the temp array to the original array
+    for(int i = 0; i < n; i++){
+        array[i] = temp[(startIndex + i) % n];
+    }
+}
+
+void rotateRight(int *array, int size, int k){
+    int temp[n];
+
+    // copy the elements of original array into temp array
+    for(int i = 0; i < n; i++){
+        temp[i] = array[i];
+    }
+
+    // calculate the starting index of the rotation
+    int startIndex = n - (k % n);
+
+    // copy the elements from the temp array to the original array
+    for(int i = 0; i < n; i++){
+        array[i] = temp[(startIndex + i) % n];
+    }
 }
 
 
