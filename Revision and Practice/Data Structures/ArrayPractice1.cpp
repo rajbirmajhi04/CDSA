@@ -105,16 +105,16 @@ void rotateLeft(int *array, int size, int k){
     int temp[n];
 
     // copy the elements of original array into temp array
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < size; i++){
         temp[i] = array[i];
     }
 
     // calculate the starting index of the rotation
-    int startIndex = k % n;
+    int startIndex = k % size;
 
     // copy the elements from the temp array to the original array
     for(int i = 0; i < n; i++){
-        array[i] = temp[(startIndex + i) % n];
+        array[i] = temp[(startIndex + i) % size];
     }
 }
 
@@ -127,11 +127,11 @@ void rotateRight(int *array, int size, int k){
     }
 
     // calculate the starting index of the rotation
-    int startIndex = n - (k % n);
+    int startIndex = size - (k % size);
 
     // copy the elements from the temp array to the original array
     for(int i = 0; i < n; i++){
-        array[i] = temp[(startIndex + i) % n];
+        array[i] = temp[(startIndex + i) % size];
     }
 }
 
