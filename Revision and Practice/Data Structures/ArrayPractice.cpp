@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 void display_fun(int *array, int size){
@@ -65,6 +66,7 @@ void summation(int *array, int size){
     }
     cout << "Sum: " << sum << endl; 
 }
+
 void product(int *array, int size){
     long long product = 1;
     for(int i = 0; i < size; i++){
@@ -95,6 +97,38 @@ void SwapMaxMin(int *array, int size){
     int temp = array[minIndex];
     array[minIndex] = array[maxIndex];
     array[maxIndex] = temp;
+}
+
+void UniqueNumber(int array[], int size){
+    bool isUnique;
+    cout << "Unique Numbers: " << endl;
+    for(int i = 0; i < size; i++){
+        isUnique = true;
+        for(int j = 0; i < size; j++){
+            if(i != j && array[i] == array[j]){
+                isUnique = false;
+                break;
+            }
+        }
+        if(isUnique){
+            cout << array[i] << ", ";
+        }
+    }
+    cout << endl;
+}
+
+void Intersection(int array1[], int size1, int array2[], int size2){
+    cout << "Intersection of Arrays: " << endl;
+
+    for(int i = 0; i < size1; i++){
+        for(int j = 0; j < size2; j++){
+            if(array1[i] == array2[j]){
+                cout << array1[i] << ", ";
+                break;
+            }
+        }
+    }
+    cout << endl;
 }
 
 int main()
@@ -131,6 +165,12 @@ int main()
     // cout << "Modified Array: " << endl;
     // display_fun(arr, s); 
 
-    
+    int ar1[] = {1, 2, 2, 45, 76, 8, 99, 99, 34, 45};
+    int ar2[] = {1, 10, 5, 45, 76, 8, 76, 99, 34, 45};
+    int sz1 = sizeof(ar1)/sizeof(ar1[0]);
+    int sz2 = sizeof(ar2)/sizeof(ar2[0]);
+
+    // UniqueNumber(ar1, sz1);
+    Intersection(ar1, sz1, ar2, sz2);
 
 }
