@@ -1,13 +1,21 @@
 Data structures are organized ways to store, manage, and retrieve data efficiently, depending on the type of operations you need to perform. They provide a means to organize large amounts of data for optimal performance in various algorithms and tasks.
 
-Common Data Structures:
+Data Structures:
 
 1) Arrays:
 --> Array is a data structure that stores a collection of elements of same type in contiguous memory locations
 --> Fixed size, Indexed Access, Contiguous Memory, Homogeneous Elements and Linear
+--> Memory is allocated during compile time (Static Allocation) --> Stack
 
 --> Advantages: Memory Efficient and Fast Access
 --> Disadvantages: Fixed Size, Insertion and Deletion requires shifting of elements
 
+2) Vectors: (STL Container)
+--> Vectors are used to store similar datatype. However unlike arrays the size of vector can grow dynamically
+--> Size can be changed during the execution of a program
+--> Memory is allcoated during Runtime (Dynamic Allocation) --> Inside heap
+--> Internal array (vector) gets double when size gets full
 
-
+// Conclusion:
+Performace: Arrays are slightly faster than Vectors because Arrays are contiguous and the size is known in advance.
+Usage: Arrays are commonly used when the size of the data set is known.
