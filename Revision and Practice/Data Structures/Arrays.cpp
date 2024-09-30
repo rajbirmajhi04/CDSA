@@ -1,22 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Passing array using pointer
-void fun(int *array, int size){
-    for(int i = 0; i < size; i++){
-        cout << array[i] << " ";
-    }
-    cout << endl;
-}
-
-// Passing array using reference
-void fun1(int (&array)[5]){
-    for(int i = 0; i < 5; i++){
-        cout << array[i] << " ";
-    }
-    cout << endl;    
-}
-
 int main()
 {
     
@@ -77,76 +61,6 @@ int main()
         cout << marks[i] << " ";
     }
     cout << endl;
-
-    // Arrays and Pointers
-    int array[5] = {1, 2, 3, 4, 5};
-    int size = sizeof(array)/sizeof(array[0]);
-    int *arr_ptr_one = &array[0]; // Method 1
-    int *arr_ptr_two = array; // Method 2
-
-    // Passing arrays to function using pointers
-    // The array decays into pointer to its first element. However since the size is not passed along with the pointer.
-    // We need to pass the array size separately.
-    fun(array, size);
-    
-    // Passing arrays to function using reference
-    // The function receives the entire array as a reference
-    fun1(array);
-
-    // Dynamic Memory Management
-    int *point_var_one = new int; // Allocate memory for a single int 
-    *point_var_one = 10;
-    int *point_var_three = new int(10); // Allocates memory for a single int
-    int *point_var_two = new int[10]; // Allocate memory for an array of 10 integers
-    
-    // Memory Deallocation
-    delete point_var_one; // Deallocates memory for a single integer
-    point_var_one = nullptr; // To avoid dangling pointer issue
-    delete[] point_var_two; // Deallocates memory for the array of integers
-    point_var_two = nullptr; // To avoid dangling pointer issue
-    delete point_var_three; // Deallocates memory for a single integer
-    point_var_three = nullptr; // To avoid dangling pointer issue
-
-    // Array size
-    // We need to store the size manually
-    int arr_size = 10;
-    int *nArray = new int[arr_size];
-    for(int i = 0; i <= arr_size; i++){
-        nArray[i] = i * 9;
-    }
-    fun(nArray, arr_size);
-    delete[] nArray;
-    nArray = nullptr;
-
-    // Declaration and Initialization
-    // nothrow: throws an error if memory allocation failed
-    int *q = new(nothrow) int(10); 
-    int *r = new(nothrow) int[10];
-
-    int *s = new(nothrow) int;
-    *s = 10;
-    
-    int *t = NULL;
-    t = new(nothrow) int;
-
-    if(!t){
-        cout << "Memory Allocation Failed!" << endl;
-        exit(0);
-    }
-    else {
-        *t = 10;
-        cout << "Memory Allocated Successfully!" << endl;
-        delete t;
-        t = nullptr;
-    }
-
-    // Request a block of memory of n size
-    int memset;
-    cout << "Enter memory size: ";
-    cin >> memset;
-
-    int *p = new(nothrow) int[memset];
-    int *pp = new(nothrow) int(memset);
 
     return 0;
 }

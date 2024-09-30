@@ -103,16 +103,6 @@ int main()
     vector5.erase(vector5.begin(), vector5.begin() + 5);
     // vector5.clear(); // Removes all element
 
-
-    
-
-
-
-
-
-    
-    
-
     display(vector5);
 
 

@@ -278,13 +278,23 @@ void ArmstrongChecker(int num1, int num2){
     }  
 }
 
+void unique_element(vector <int> &vec){
+    int ans = 0;
+    for(int val: vec){
+        ans = ans ^ val;
+    }
+    cout << "Unique Number: " << ans << endl;;
+}
+
 int main()
 {
+    vector <int> vec = {4, 1, 2, 1, 2};
     Right_To_Left(4254);
     Left_To_Right(3214);
     ReverseNumber(7654);
     ReverseString("Hello World");
     ArmstrongChecker(14353);
     ArmstrongChecker(1, 5);
+    unique_element(vec);
     return 0;
 }
