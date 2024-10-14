@@ -1,0 +1,6 @@
+Time complexity is not the actual time taken but the amount of time taken as function of input size(n).
+
+Refers to the computational complexity that describes the amount of time it takes to run an algorithm as a function of the size of its input.
+
+It gives a theoretical measure of the performance of an algorithm in terms of how the execution time increases with the input size.
+
