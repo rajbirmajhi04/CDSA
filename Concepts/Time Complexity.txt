@@ -4,3 +4,15 @@ Refers to the computational complexity that describes the amount of time it take
 
 It gives a theoretical measure of the performance of an algorithm in terms of how the execution time increases with the input size.
 
+Big (O): Worst Case (Upper Bound)
+Theta: Average Case 
+Omega: Best Case (Lower Bound)
+
+Finding Time Complexity:
+i) Ignore constants
+ii) Focus on largest term 
+
+
+
+
+
