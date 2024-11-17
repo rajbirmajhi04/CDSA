@@ -4,40 +4,54 @@ using namespace std;
 
 int main()
 {   
-    // a matrix with 3 rows and 4 columns which can hold a total 3 * 4 = 12 elements 
-    int matrix_A[3][4] = 
-    {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 8, 1, 2}
-    };
 
-    // dynamic multidimensional array
-    vector <vector <char>> matrix_C = 
-    {
-            {'a', 'b', 'c', 'd'},
-            {'e', 'f', 'g', 'h'},
-            {'i', 'j', 'k', 'l'},
-            {'m', 'n', 'o', 'p'}
-    };
+    int rows, columns;
+    cout << "Enter rows: ";
+    cin >> rows; 
+    cout << "Enter columns: ";
+    cin >> columns;
 
-    // using ranged based loop
-    cout << "Displaying Char Array: " << endl;
-    for(const auto &row: matrix_C){
-        for(const auto &element: row){
-            cout << element << " ";
+    int matrix_D[rows][columns] = {};
+
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < columns; j++){
+           cout << "Enter value for element (" << i << ", " << j << "): ";
+           cin >> matrix_D[i][j];
+        }
+    }
+
+    cout << "Matrix D" << endl;
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < columns; j++){
+            cout << matrix_D[i][j] << " ";
         }
         cout << endl;
     }
 
-    cout << "Displaying Integer Array: " << endl;
-    for(const auto &row: matrix_A){
-        for(const auto &element: row){
-            cout << element << " ";
-        }
-        cout << endl;
-    }
+    // Dynamic Array and VLA using vector of vector
+    vector <vector <int>> vec1(rows, vector<int>(columns, 0));
     
-    // 
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < columns; j++){
+            cout << "Enter value for element (" << i << ", " << j << "): ";
+            cin >> vec1[i][j];
+        }
+    }
+
+    cout << "Displaying Dynamic Array: " << endl;
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < columns; j++){
+            cout << vec1[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    
+
+
+
+
+    
+
     return 0;
 }
