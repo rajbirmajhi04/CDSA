@@ -22,6 +22,19 @@ Common Time Complexities:
 7) O(2^x)
 7) O(n!)
 
+Time complexity for Recursion:
+TC = total no. of recursice calls * work in each calls
+
+Space complexity for Recusrion:
+--> In normal code using loops the total number of variables created are considered as auxiliary space but in 
+recursive pr recursion there is a stack called call stack.
+--> In recursion still we dont make any extra variables, still there is a extra stack used in the memory.
+--> Here auxiliary space is also taken into count + the call stack memory is added.
+
+--> SC = depth of recursion tree * memory in each call
+--> SC = height of call * memory in each call
+
+
 
 
 
