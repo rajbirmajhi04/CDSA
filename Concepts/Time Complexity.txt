@@ -12,6 +12,16 @@ Finding Time Complexity:
 i) Ignore constants
 ii) Focus on largest term 
 
+Common Time Complexities:
+1) O(1)
+2) O(log n)
+3) O(n)
+4) O(nlogn)
+5) O(n2)
+6) O(n3)
+7) O(2^x)
+7) O(n!)
+
 
 
 

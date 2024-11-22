@@ -1,1 +1,3 @@
 Amount of space taken by an algorithm as function of input size
+Code: Auxiliary Space and input
+In space complexity calculation input is ignored and only auxiliary (extra) space is considered
